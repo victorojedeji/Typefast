@@ -10,18 +10,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #52e01f;
 }
 
 .main {
     width: 50%;
+    background: #ffffff;
+    border: 1px solid #52e01f;
+    border-radius: .3em;
+    padding: 3em;
+
+}
+
+.title {
+    text-align: center;
+}
+
+.level-holder {
+    display: flex;
+    gap: 2em;
 }
 
 #input {
     display: block;
     width: 100%;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: .3em;
+}
+
+#input:focus,
+#input:active {
+    outline: 2px solid #52e01f;
+    border: 1px solid #52e01f;
+    background: #e3f8db;
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .check-btn {
     display: block;
-    
+    text-align: center;
+    width: 50%;
+    padding: .5em;
+    background: #52e01f;
+    margin-top: 2em;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s;
+}
+
+.check-btn:hover {
+    background-color: #4dfc0e;
+}
+
+.check-btn:active {
+    background: #52e01f;
 }
