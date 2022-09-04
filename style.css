@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     background: #52e01f;
+    font-size: 1rem;
 }
 
 .main {
@@ -29,6 +30,15 @@ body {
 .level-holder {
     display: flex;
     gap: 2em;
+}
+
+.display-content,
+.note {
+    text-align: center;
+}
+
+.display-content {
+    font-size: 1rem;
 }
 
 #input {
