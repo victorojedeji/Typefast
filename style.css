@@ -61,6 +61,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 2em;
 }
 
 .check-btn {
@@ -68,7 +69,7 @@ body {
     text-align: center;
     width: 33%;
     padding: .5em;
-    background: #52e01f;
+    background: #e0c91f;
     margin-top: 2em;
     text-transform: capitalize;
     color: #ffffff;
@@ -78,11 +79,11 @@ body {
 }
 
 .check-btn:hover {
-    background-color: #4dfc0e;
+    background-color: #dfcf52;
 }
 
 .check-btn:active {
-    background: #52e01f;
+    background: #e0c91f;
 }
 
 .next-btn {
@@ -112,7 +113,7 @@ body {
     text-align: center;
     width: 33%;
     padding: .5em;
-    background: #ee4227;
+    background: #52e01f;
     margin-top: 2em;
     text-transform: capitalize;
     color: #ffffff;
@@ -122,9 +123,36 @@ body {
 }
 
 .start-btn:hover {
-    background-color: #f2735f;
+    background-color: #4dfc0e;
 }
 
 .start-btn:active {
+    background: #52e01f;
+}
+
+.quit-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quit-btn {
+    width: 50%;
+    display: block;
+    text-align: center;
+    padding: .5em;
+    background: #ee4227;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s
+}
+
+.quit-btn:hover {
+    background-color: #f2735f;
+}
+
+.quit-btn:active {
     background: #ee4227;
 }
