@@ -47,7 +47,7 @@ function next() {
     levelOne.map(obj => {
         if(obj.id === increment){
             objInUse = obj;
-            subLevel.textContent = `Sublevel: ${obj.id}`;
+            subLevel.textContent = `Sublevel: ${objInUse.id}`;
             return objInUse;
         }
     });
