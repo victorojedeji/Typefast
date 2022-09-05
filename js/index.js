@@ -1,4 +1,4 @@
-const displayContent = document.querySelector(".display-content");
+const display = document.querySelector(".display-holder");
 const checkBtn = document.querySelector(".check-btn");
 const nextBtn = document.querySelector(".next-btn");
 const quitBtn = document.querySelector(".quit-btn");
@@ -16,28 +16,44 @@ quitBtn.addEventListener("click", quitGame);
 
 subLevel.style.display = "none";
 level.style.display = "none";
-
-function check() {
-    console.log("check activated")
-};
+time.style.display = "none";
 
 
 function startGame() {
     nextBtn.removeAttribute("disabled");
     checkBtn.removeAttribute("disabled");
     quitBtn.removeAttribute("disabled");
-    
+
     subLevel.style.display = "block";
     level.style.display = "block";
-
+    time.style.display = "block";
+    
     if(increment === 1) {
-        displayContent.textContent = levelOne[0].content;
+        display.innerHTML = `<h5 class="display-content" title=${levelOne[0].content}>${levelOne[0].content}</h5>`;
     }
+    initTimer(10);
+
+    startBtn.setAttribute('disabled', "");
 };
+
+let timer;
+const initTimer = maxTime => {
+    timer = setInterval(() => {
+        if(maxTime > 0) {
+            maxTime--;
+           return time.innerText = `Time left: ${maxTime}`;
+        }
+        clearInterval(timer);
+        alert(`Out of Time!`);
+    }, 1000)
+}
 
 
 let increment = 1;
 function next() {
+    clearInterval(timer);
+    initTimer(10);
+
     increment = increment + 1;
     if (increment > 5) {
         increment = 1;
@@ -51,11 +67,14 @@ function next() {
             return objInUse;
         }
     });
-    displayContent.textContent = objInUse.content;
+    display.innerHTML = `<h5 class="display-content" title=${objInUse.content}>${objInUse.content}</h5>`;
+
 };
 
-displayContent.setAttribute("title", "")
-
+function check() {
+    let userText = inputField.value.toLowerCase();
+    // if(userText === )
+};
 
 function quitGame() {
     console.log("end of the game")
