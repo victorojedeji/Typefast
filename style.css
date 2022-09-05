@@ -21,7 +21,6 @@ body {
     border-radius: .3em;
     padding: 3em;
     min-width: 400px;
-
 }
 
 .title {
@@ -45,7 +44,7 @@ body {
 #input {
     display: block;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #4dfc0e;
     padding: 1em;
     border-radius: .3em;
 }
@@ -61,12 +60,13 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .check-btn {
     display: block;
     text-align: center;
-    width: 50%;
+    width: 33%;
     padding: .5em;
     background: #52e01f;
     margin-top: 2em;
@@ -83,4 +83,48 @@ body {
 
 .check-btn:active {
     background: #52e01f;
+}
+
+.next-btn {
+    display: block;
+    text-align: center;
+    width: 33%;
+    padding: .5em;
+    background: #1f7ce0;
+    margin-top: 2em;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s
+}
+
+.next-btn:hover {
+    background-color: #5e9fe4;
+}
+
+.next-btn:active {
+    background: #1f7ce0;
+}
+
+.start-btn {
+    display: block;
+    text-align: center;
+    width: 33%;
+    padding: .5em;
+    background: #ee4227;
+    margin-top: 2em;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s
+}
+
+.start-btn:hover {
+    background-color: #f2735f;
+}
+
+.start-btn:active {
+    background: #ee4227;
 }
