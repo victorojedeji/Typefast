@@ -1,10 +1,10 @@
 const levelOne = [
     {
-        id: 0,
+        id: 1,
         content: "Excrusiating",
     },
     {
-        id: 1,
+        id: 2,
         content: "believing",
     },
   //  {
@@ -12,7 +12,7 @@ const levelOne = [
       //  content: "spacious"
     //},
     {
-        id: 2,
+        id: 3,
         content: "arguments",
     },
  //   {
@@ -28,7 +28,7 @@ const levelOne = [
   //      content: "tantalizing"
  //   },
     {
-        id: 3,
+        id: 4,
         content: "clandestine",
     },
   //  {
@@ -36,14 +36,14 @@ const levelOne = [
   //      content: "pulsating"  
   //  },
     {
-        id: 4,
+        id: 5,
         content: "treatable",
     }
 ];
 
 const levelTwo = [
     {
-        id: 0,
+        id: 1,
         content: "i typed this really fast",
     },
    // {
@@ -55,7 +55,7 @@ const levelTwo = [
    //     content: "you play too much"
    // }
     {
-        id: 1,
+        id: 2,
         content: "moving around is not good for children",
     },
    // {
@@ -67,11 +67,11 @@ const levelTwo = [
    //     content: "lovely day ahead today"
    // },
     {
-        id: 2,
+        id: 3,
         content: "a good day to write some javascript codes",
     },
     {
-        id: 3,
+        id: 4,
         content: "listening to refreshing music at the moment",
     },
    // {
@@ -79,7 +79,7 @@ const levelTwo = [
    //     content: "watching the news gets me agitated"
    // },
     {
-        id: 4,
+        id: 5,
         content: "slept through the night because i was tired",
     }
 ];

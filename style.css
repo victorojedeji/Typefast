@@ -156,3 +156,7 @@ body {
 .quit-btn:active {
     background: #ee4227;
 }
+
+.sublevel {
+    text-transform: capitalize;
+}
