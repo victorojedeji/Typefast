@@ -1,6 +1,6 @@
-const display = document.querySelector(".display-holder");
+const displayContent = document.querySelector(".display-content");
 const checkBtn = document.querySelector(".check-btn");
-const nextBtn = document.querySelector(".next-btn");
+// const nextBtn = document.querySelector(".next-btn");
 const quitBtn = document.querySelector(".quit-btn");
 const startBtn = document.querySelector(".start-btn");
 const inputField = document.querySelector("#input");
@@ -10,7 +10,7 @@ const subLevel = document.querySelector(".sublevel");
 
 
 startBtn.addEventListener("click", startGame);
-nextBtn.addEventListener("click", next);
+// nextBtn.addEventListener("click", next);
 checkBtn.addEventListener("click", check);
 quitBtn.addEventListener("click", quitGame);
 
@@ -18,9 +18,8 @@ subLevel.style.display = "none";
 level.style.display = "none";
 time.style.display = "none";
 
-
 function startGame() {
-    nextBtn.removeAttribute("disabled");
+    // nextBtn.removeAttribute("disabled");
     checkBtn.removeAttribute("disabled");
     quitBtn.removeAttribute("disabled");
 
@@ -29,7 +28,7 @@ function startGame() {
     time.style.display = "block";
     
     if(increment === 1) {
-        display.innerHTML = `<h5 class="display-content" title=${levelOne[0].content}>${levelOne[0].content}</h5>`;
+        displayContent.innerText = levelOne[0].content;
     }
     initTimer(10);
 
@@ -67,13 +66,17 @@ function next() {
             return objInUse;
         }
     });
-    display.innerHTML = `<h5 class="display-content" title=${objInUse.content}>${objInUse.content}</h5>`;
+    displayContent.innerText = objInUse.content;
 
 };
 
 function check() {
-    let userText = inputField.value.toLowerCase();
-    // if(userText === )
+    let userText = inputField.value;
+    console.log(displayContent.textContent)
+    if(userText === displayContent.textContent) {
+        inputField.value = "";
+        next();
+    }
 };
 
 function quitGame() {

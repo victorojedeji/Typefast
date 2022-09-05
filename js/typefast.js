@@ -5,7 +5,7 @@ const levelOne = [
     },
     {
         id: 2,
-        content: "believing",
+        content: "Believing",
     },
   //  {
       //  id: 3,
@@ -13,7 +13,7 @@ const levelOne = [
     //},
     {
         id: 3,
-        content: "arguments",
+        content: "Arguments",
     },
  //   {
     //    id: 5,
@@ -29,7 +29,7 @@ const levelOne = [
  //   },
     {
         id: 4,
-        content: "clandestine",
+        content: "Clandestine",
     },
   //  {
   //      id: 9,
@@ -37,7 +37,7 @@ const levelOne = [
   //  },
     {
         id: 5,
-        content: "treatable",
+        content: "Treatable",
     }
 ];
 
