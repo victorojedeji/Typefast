@@ -80,6 +80,6 @@ const levelTwo = [
    // },
     {
         id: 5,
-        content: "Lovely day ahead today",
+        content: "Lovely day ahead",
     }
 ];
