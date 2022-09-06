@@ -67,13 +67,17 @@ function next() {
         increment = 1;
 
         let nextLevel = Number(level.textContent);
-        if(nextLevel <= 4) {
+        if(nextLevel <= 2) {
             nextLevel++;
             level.textContent = nextLevel;
         }
+
+        if(nextLevel > 2) {
+            console.log("You've completed the game!")
+        }
     }
 
-    if(Number(level.textContent) > 1) {
+    if((Number(level.textContent) > 1) && (Number(level.textContent) < 3)) {
     mappedData(levelTwo);
     }else mappedData(levelOne);
 };
