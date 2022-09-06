@@ -61,7 +61,7 @@ function next() {
         let nextLevel = Number(level.textContent);
         if(nextLevel <= 4) {
             nextLevel++;
-            level.textContent = nextLevel++;
+            level.textContent = nextLevel;
         }
     }
     
@@ -69,10 +69,11 @@ function next() {
     levelOne.map(obj => {
         if(obj.id === increment){
             objInUse = obj;
-            subLevel.textContent = objInUse.id;
             return objInUse;
         }
     });
+    
+    subLevel.textContent = objInUse.id;
     displayContent.textContent = objInUse.content;
 
 };
