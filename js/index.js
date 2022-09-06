@@ -84,9 +84,7 @@ function check() {
     if(userText === displayContent.textContent) {
         inputField.value = "";
         next();
-    }
-
-    if(userText !== displayContent.textContent) {
+    } else {
         inputField.value = "";
         clearInterval(timer);
         initTimer(10);
@@ -99,7 +97,7 @@ function check() {
                 main.innerText = "you lose!"
             }
         }
-    }
+    };
 };
 
 function quitGame() {
