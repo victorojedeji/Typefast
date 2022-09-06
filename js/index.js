@@ -71,9 +71,11 @@ function next() {
             nextLevel++;
             level.textContent = nextLevel;
         }
-
     }
-    mappedData(levelOne);
+
+    if(Number(level.textContent) > 1) {
+    mappedData(levelTwo);
+    }else mappedData(levelOne);
 };
 
     
@@ -120,5 +122,6 @@ function check() {
 };
 
 function quitGame() {
-    console.log("end of the game")
+    console.log("end of the game");
+    clearInterval(timer);
 }

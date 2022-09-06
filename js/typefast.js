@@ -44,7 +44,7 @@ const levelOne = [
 const levelTwo = [
     {
         id: 1,
-        content: "i typed this really fast",
+        content: "Typed fast",
     },
    // {
    //     id: 2,
@@ -54,25 +54,25 @@ const levelTwo = [
    //     id: 3,
    //     content: "you play too much"
    // }
-    {
-        id: 2,
-        content: "moving around is not good for children",
-    },
+    // {
+    //     id: 2,
+    //     content: "Moving around is not good for children",
+    // },
    // {
    //     id: 5,
    //     content: "you are saying nonsense about me again",
    // },
-   // {
-   //     id: 6,
-   //     content: "lovely day ahead today"
-   // },
+   {
+       id: 2,
+       content: "Slept very well",
+   },
     {
         id: 3,
-        content: "a good day to write some javascript codes",
+        content: "Good JavaScript code",
     },
     {
         id: 4,
-        content: "listening to refreshing music at the moment",
+        content: "Listening to music",
     },
    // {
    //     id: 9,
@@ -80,6 +80,6 @@ const levelTwo = [
    // },
     {
         id: 5,
-        content: "slept through the night because i was tired",
+        content: "Lovely day ahead today",
     }
 ];
