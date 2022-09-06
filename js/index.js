@@ -73,7 +73,7 @@ function next() {
         }
 
         if(nextLevel > 2) {
-            console.log("You've completed the game!")
+            main.innerText = "You've completed the game!"
         }
     }
 
