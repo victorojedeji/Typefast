@@ -8,9 +8,10 @@
     <body>
         <main class="main">
             <h3 class="title">Typefast</h3>
-            <div class="level-holder">
-                <h4 class="level">Level: 1</h4>
-                <h4 class="sublevel">sublevel: 1</h4>
+            <div class="level-wrapper">
+                <h4 class="none level-holder">Level: <span class="level">1</span></h4>
+                <h4 class="none sublevel-hodler">Sublevel: <span class="sublevel">1</span></h4>
+                <h4 class="none chances">Chances: <span class="chance">3</span></h4>
             </div>
             
             <p class="note">write all text displayed within the given time to go to the next level.</p>
@@ -18,8 +19,8 @@
             <div class="display-holder">
                 <h5 class="display-content"></h5>
             </div>
-            <p class="time">Time left: </p>
-            <input type="text" name="input" id="input" value="" />
+            <p class="none time-holder">Time left: <span class="time"></span></p>
+            <input type="text" name="input" id="input" value="" disabled/>
             
             <div class="btn-wrapper">
                 <button class="start-btn">start</button>

@@ -1,12 +1,18 @@
+const main = document.querySelector(".main");
 const displayContent = document.querySelector(".display-content");
+
 const checkBtn = document.querySelector(".check-btn");
 // const nextBtn = document.querySelector(".next-btn");
 const quitBtn = document.querySelector(".quit-btn");
 const startBtn = document.querySelector(".start-btn");
+
 const inputField = document.querySelector("#input");
+
 const time = document.querySelector(".time");
 const level = document.querySelector(".level");
 const subLevel = document.querySelector(".sublevel");
+const chance = document.querySelector(".chance");
+
 
 
 startBtn.addEventListener("click", startGame);
@@ -14,18 +20,12 @@ startBtn.addEventListener("click", startGame);
 checkBtn.addEventListener("click", check);
 quitBtn.addEventListener("click", quitGame);
 
-subLevel.style.display = "none";
-level.style.display = "none";
-time.style.display = "none";
-
 function startGame() {
     // nextBtn.removeAttribute("disabled");
     checkBtn.removeAttribute("disabled");
     quitBtn.removeAttribute("disabled");
-
-    subLevel.style.display = "block";
-    level.style.display = "block";
-    time.style.display = "block";
+    inputField.removeAttribute("disabled");
+    main.classList.add("active")
     
     if(increment === 1) {
         displayContent.innerText = levelOne[0].content;
@@ -40,10 +40,11 @@ const initTimer = maxTime => {
     timer = setInterval(() => {
         if(maxTime > 0) {
             maxTime--;
-           return time.innerText = `Time left: ${maxTime}`;
+           return time.textContent = maxTime;
         }
         clearInterval(timer);
-        alert(`Out of Time!`);
+        alert(`Out of Time!, you've lost a chance. Try again!`);
+        startGame();
     }, 1000)
 }
 
@@ -56,17 +57,23 @@ function next() {
     increment = increment + 1;
     if (increment > 5) {
         increment = 1;
+
+        let nextLevel = Number(level.textContent);
+        if(nextLevel <= 4) {
+            nextLevel++;
+            level.textContent = nextLevel++;
+        }
     }
     
     let objInUse = null;
     levelOne.map(obj => {
         if(obj.id === increment){
             objInUse = obj;
-            subLevel.textContent = `Sublevel: ${objInUse.id}`;
+            subLevel.textContent = objInUse.id;
             return objInUse;
         }
     });
-    displayContent.innerText = objInUse.content;
+    displayContent.textContent = objInUse.content;
 
 };
 

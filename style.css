@@ -27,9 +27,9 @@ body {
     text-align: center;
 }
 
-.level-holder {
+.level-wrapper {
     display: flex;
-    gap: 2em;
+    gap: 1em;
 }
 
 .display-holder {
@@ -163,4 +163,18 @@ body {
 
 .sublevel {
     text-transform: capitalize;
+}
+
+.level-holder,
+.sublevel-hodler,
+.chances,
+.time-holder {
+    display: none;
+}
+
+.main.active .level-holder,
+.main.active .sublevel-hodler,
+.main.active .chances,
+.main.active .time-holder {
+    display: block;
 }
