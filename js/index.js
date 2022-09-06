@@ -30,10 +30,17 @@ function startGame() {
     if(increment === 1) {
         displayContent.innerText = levelOne[0].content;
     }
+
+    // if((level.textContent == 2) && (increment === 1)) {
+    //     displayContent.innerText = levelTwo[0].content;
+    // }
+
     initTimer(10);
 
     startBtn.setAttribute('disabled', "");
 };
+
+
 
 let timer;
 const initTimer = maxTime => {
@@ -43,8 +50,9 @@ const initTimer = maxTime => {
            return time.textContent = maxTime;
         }
         clearInterval(timer);
-        alert(`Out of Time!, you've lost a chance. Try again!`);
+      //  alert(`Out of Time! You've lost a chance. Try again!`);
         startGame();
+        loseChance();
     }, 1000)
 }
 
@@ -63,10 +71,18 @@ function next() {
             nextLevel++;
             level.textContent = nextLevel;
         }
+
     }
+    mappedData(levelOne);
+};
+
     
+
+
+
+function mappedData(level) {
     let objInUse = null;
-    levelOne.map(obj => {
+    level.map(obj => {
         if(obj.id === increment){
             objInUse = obj;
             return objInUse;
@@ -75,29 +91,32 @@ function next() {
 
     subLevel.textContent = objInUse.id;
     displayContent.textContent = objInUse.content;
+};
 
+function loseChance() {
+    inputField.value = "";
+    clearInterval(timer);
+    initTimer(10);
+    let runDown = Number(chance.textContent);
+    if(runDown >= 0) {
+        runDown--;
+        chance.textContent = runDown;
+        if(runDown == 0) {
+        clearInterval(timer);
+        main.innerText = "you lose!"
+        }
+    }
 };
 
 function check() {
     let userText = inputField.value;
-    console.log(displayContent.textContent)
+    
     if(userText === displayContent.textContent) {
         inputField.value = "";
         next();
     } else {
-        inputField.value = "";
-        clearInterval(timer);
-        initTimer(10);
-        let runDown = Number(chance.textContent);
-        if(runDown >= 0) {
-            runDown--;
-            chance.textContent = runDown;
-            if(runDown === 0) {
-                clearInterval(timer);
-                main.innerText = "you lose!"
-            }
-        }
-    };
+        loseChance();
+    }
 };
 
 function quitGame() {
