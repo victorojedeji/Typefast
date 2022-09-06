@@ -72,7 +72,7 @@ function next() {
             return objInUse;
         }
     });
-    
+
     subLevel.textContent = objInUse.id;
     displayContent.textContent = objInUse.content;
 
@@ -84,6 +84,21 @@ function check() {
     if(userText === displayContent.textContent) {
         inputField.value = "";
         next();
+    }
+
+    if(userText !== displayContent.textContent) {
+        inputField.value = "";
+        clearInterval(timer);
+        initTimer(10);
+        let runDown = Number(chance.textContent);
+        if(runDown >= 0) {
+            runDown--;
+            chance.textContent = runDown;
+            if(runDown === 0) {
+                clearInterval(timer);
+                main.innerText = "you lose!"
+            }
+        }
     }
 };
 
