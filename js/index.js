@@ -47,7 +47,6 @@ const initTimer = maxTime => {
            return time.textContent = maxTime;
         }
         clearInterval(timer);
-      //  alert(`Out of Time! You've lost a chance. Try again!`);
         startGame();
         loseChance();
     }, 1000)
