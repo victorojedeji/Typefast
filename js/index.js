@@ -6,6 +6,7 @@ const checkBtn = document.querySelector(".check-btn");
 const quitBtn = document.querySelector(".quit-btn");
 const startBtn = document.querySelector(".start-btn");
 const quitConfirmBtn = document.querySelector(".quit-confirm");
+const continueBtn = document.querySelector(".continue");
 
 const inputField = document.querySelector("#input");
 
@@ -21,6 +22,7 @@ startBtn.addEventListener("click", startGame);
 checkBtn.addEventListener("click", check);
 quitBtn.addEventListener("click", quitGame);
 quitConfirmBtn.addEventListener("click", quitConfirm);
+continueBtn.addEventListener("click", continueGame);
 
 function startGame() {
     // nextBtn.removeAttribute("disabled");
@@ -133,6 +135,11 @@ function quitGame() {
     main.classList.add("quit");
 }
 
+function continueGame() {
+    main.classList.remove("quit");
+    startGame();
+}
+
 function quitConfirm() {
     location.reload();
-}
+};
