@@ -23,6 +23,8 @@ body {
     border-radius: .3em;
     padding: 3em;
     min-width: 400px;
+    position: relative;
+    overflow: hidden;
 }
 
 .title {
@@ -179,4 +181,61 @@ body {
 .main.active .chances,
 .main.active .time-holder {
     display: block;
+}
+
+.quit-section {
+    position: absolute;
+    width: 100%;
+    background:rgba(225, 225, 225, .1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all .5s;
+    transform: translateY(-100%);
+}
+
+.continue,
+.quit-confirm {
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s;
+    width: 30%;
+    display: block;
+    text-align: center;
+    padding: .5em;
+}
+
+.continue {
+    background: #52e01f;
+}
+
+.continue:hover {
+    background-color: #4dfc0e;
+}
+
+.continue:active {
+    background: #52e01f;
+}
+
+.quit-confirm {
+    background: #ee4227;
+}
+
+.quit-confirm:hover {
+    background-color: #f2735f;
+}
+
+.quit-confirm:active {
+    background: #ee4227;
+}
+
+.main.quit .quit-section {
+    transform: translateY(0%);
 }

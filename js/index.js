@@ -128,4 +128,5 @@ function check() {
 function quitGame() {
     console.log("end of the game");
     clearInterval(timer);
+    main.classList.add("quit");
 }
