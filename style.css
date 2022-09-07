@@ -42,6 +42,25 @@ body {
 
 .display-content {
     text-align: center;
+    background: #dcdcdc;
+    padding: .5em;
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+
+.validation-msg {
+    font-size: .9em;
+    text-align: center;
+    display: none;
+}
+
+/* .main.active .validation-msg {
+    display: block;
+} */
+
+.main.active .display-content {
+    display: block;
 }
 
 .note {
