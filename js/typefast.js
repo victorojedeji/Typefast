@@ -1,7 +1,7 @@
 const levelOne = [
     {
         id: 1,
-        content: "Excrusiating",
+        content: "Excruciating",
     },
     {
         id: 2,
