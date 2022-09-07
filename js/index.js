@@ -2,7 +2,6 @@ const main = document.querySelector(".main");
 const displayContent = document.querySelector(".display-content");
 
 const checkBtn = document.querySelector(".check-btn");
-// const nextBtn = document.querySelector(".next-btn");
 const quitBtn = document.querySelector(".quit-btn");
 const startBtn = document.querySelector(".start-btn");
 const quitConfirmBtn = document.querySelector(".quit-confirm");
@@ -18,14 +17,12 @@ const chance = document.querySelector(".chance");
 
 
 startBtn.addEventListener("click", startGame);
-// nextBtn.addEventListener("click", next);
 checkBtn.addEventListener("click", check);
 quitBtn.addEventListener("click", quitGame);
 quitConfirmBtn.addEventListener("click", quitConfirm);
 continueBtn.addEventListener("click", continueGame);
 
 function startGame() {
-    // nextBtn.removeAttribute("disabled");
     checkBtn.removeAttribute("disabled");
     quitBtn.removeAttribute("disabled");
     inputField.removeAttribute("disabled");
@@ -34,10 +31,6 @@ function startGame() {
     if(increment === 1) {
         displayContent.innerText = levelOne[0].content;
     }
-
-    // if((level.textContent == 2) && (increment === 1)) {
-    //     displayContent.innerText = levelTwo[0].content;
-    // }
 
     initTimer(10);
 
@@ -130,7 +123,6 @@ function check() {
 };
 
 function quitGame() {
-    console.log("end of the game");
     clearInterval(timer);
     main.classList.add("quit");
 }
