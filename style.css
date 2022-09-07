@@ -46,6 +46,7 @@ body {
 
 .note {
     text-align: justify;
+    font-size: .9rem;
 }
 
 .main.active .note {
