@@ -40,9 +40,16 @@ body {
     width: 100%;
 }
 
-.display-content,
-.note {
+.display-content {
     text-align: center;
+}
+
+.note {
+    text-align: justify;
+}
+
+.main.active .note {
+    display: none;
 }
 
 .display-content {
