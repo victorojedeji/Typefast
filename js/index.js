@@ -14,6 +14,7 @@ const time = document.querySelector(".time");
 const level = document.querySelector(".level");
 const subLevel = document.querySelector(".sublevel");
 const chance = document.querySelector(".chance");
+const validationTxt = document.querySelector(".validation-msg");
 
 
 
@@ -117,9 +118,15 @@ function check() {
     
     if(userText === displayContent.textContent) {
         inputField.value = "";
+        validationTxt.textContent = "Correct!";
+        validationTxt.style.display = "block"
+        validationTxt.style.color = "#52e01f";
         next();
     } else {
         loseChance();
+        validationTxt.textContent = "Wrong!";
+        validationTxt.style.display = "block"
+        validationTxt.style.color = "#ee4227";
     }
 };
 

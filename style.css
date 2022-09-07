@@ -53,6 +53,7 @@ body {
     font-size: .9em;
     text-align: center;
     display: none;
+    transition: all .5s;
 }
 
 /* .main.active .validation-msg {
