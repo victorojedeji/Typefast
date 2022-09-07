@@ -6,6 +6,7 @@ const quitBtn = document.querySelector(".quit-btn");
 const startBtn = document.querySelector(".start-btn");
 const quitConfirmBtn = document.querySelector(".quit-confirm");
 const continueBtn = document.querySelector(".continue");
+const restartBtn = document.querySelector(".restart-btn");
 
 const inputField = document.querySelector("#input");
 
@@ -21,6 +22,7 @@ checkBtn.addEventListener("click", check);
 quitBtn.addEventListener("click", quitGame);
 quitConfirmBtn.addEventListener("click", quitConfirm);
 continueBtn.addEventListener("click", continueGame);
+restartBtn.addEventListener("click", restartGame);
 
 function startGame() {
     checkBtn.removeAttribute("disabled");
@@ -69,7 +71,10 @@ function next() {
         }
 
         if(nextLevel > 2) {
-            main.innerText = "You've completed the game!"
+            clearInterval(timer);
+            main.innerHTML = `<div class="finished">
+                                <h2>Congratulations! You have completed the game.</h2>
+                             </div>`;
         }
     }
 
@@ -79,9 +84,6 @@ function next() {
 };
 
     
-
-
-
 function mappedData(level) {
     let objInUse = null;
     level.map(obj => {
@@ -105,7 +107,7 @@ function loseChance() {
         chance.textContent = runDown;
         if(runDown == 0) {
         clearInterval(timer);
-        main.innerText = "you lose!"
+        main.classList.add("go");
         }
     }
 };
@@ -134,3 +136,8 @@ function continueGame() {
 function quitConfirm() {
     location.reload();
 };
+
+function restartGame() {
+    location.reload();
+    main.classList.remove("go");
+}

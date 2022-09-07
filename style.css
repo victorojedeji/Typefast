@@ -225,3 +225,56 @@ body {
 .main.quit .quit-section {
     transform: translateY(0%);
 }
+
+.finished {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.restart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    background:rgba(225, 225, 225, .1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 3em;
+    transition: all .5s;
+    transform: translateY(-100%);
+}
+
+.restart-btn {
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: .3em;
+    transition: all .5s;
+    width: 30%;
+    display: block;
+    text-align: center;
+    padding: .5em;
+}
+
+.restart-btn {
+    background: #52e01f;
+}
+
+.restart-btn:hover {
+    background-color: #4dfc0e;
+}
+
+.restart-btn:active {
+    background: #52e01f;
+}
+
+.main.go .restart {
+    transform: translateY(0%);
+}
