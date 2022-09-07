@@ -77,42 +77,21 @@ body {
     text-align: center;
     width: 33%;
     padding: .5em;
-    background: #e0c91f;
+    background: #1f7ce0;;
     margin-top: 2em;
     text-transform: capitalize;
     color: #ffffff;
     font-size: 1.1rem;
     border-radius: .3em;
     transition: all .5s;
+    display: none;
 }
 
 .check-btn:hover {
-    background-color: #dfcf52;
-}
-
-.check-btn:active {
-    background: #e0c91f;
-}
-
-.next-btn {
-    display: block;
-    text-align: center;
-    width: 33%;
-    padding: .5em;
-    background: #1f7ce0;
-    margin-top: 2em;
-    text-transform: capitalize;
-    color: #ffffff;
-    font-size: 1.1rem;
-    border-radius: .3em;
-    transition: all .5s
-}
-
-.next-btn:hover {
     background-color: #5e9fe4;
 }
 
-.next-btn:active {
+.check-btn:active {
     background: #1f7ce0;
 }
 
@@ -154,7 +133,8 @@ body {
     color: #ffffff;
     font-size: 1.1rem;
     border-radius: .3em;
-    transition: all .5s
+    transition: all .5s;
+    display: none;
 }
 
 .quit-btn:hover {
@@ -182,6 +162,12 @@ body {
 .main.active .time-holder {
     display: block;
 }
+
+.main.active .check-btn,
+.main.active .quit-btn {
+    display: block;
+}
+
 
 .quit-section {
     position: absolute;
