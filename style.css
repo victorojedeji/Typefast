@@ -22,9 +22,11 @@ body {
     border: 1px solid #52e01f;
     border-radius: .3em;
     padding: 3em;
-    min-width: 400px;
+    min-width: 300px;
     position: relative;
     overflow: hidden;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .title {
