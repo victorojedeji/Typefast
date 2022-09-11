@@ -21,7 +21,8 @@ body {
     background: #ffffff;
     border: 1px solid #52e01f;
     border-radius: .3em;
-    padding: 3em;
+    padding: 1.5em;
+    margin: .5em 0;
     min-width: 300px;
     position: relative;
     overflow: hidden;
@@ -222,7 +223,6 @@ body {
     font-size: 1.1rem;
     border-radius: .3em;
     transition: all .5s;
-    width: 30%;
     display: block;
     text-align: center;
     padding: .5em;
@@ -288,7 +288,7 @@ body {
     font-size: 1.1rem;
     border-radius: .3em;
     transition: all .5s;
-    width: 30%;
+    padding: .3em;
     display: block;
     text-align: center;
     padding: .5em;
